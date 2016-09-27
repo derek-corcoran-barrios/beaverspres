@@ -1,0 +1,28 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1474923588130.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "EE982A57",
+    "lastKnownWriteTime" : 3833180308419998817,
+    "last_content_update" : 1474923588130,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "2o1dysali9",
+        "caption" : "beavers",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=beavers&cache_key=2o1dysali9",
+        "displayedObservations" : "66",
+        "environment" : "",
+        "object" : "beavers",
+        "totalObservations" : "66",
+        "variables" : "21"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,141 @@
+<style>
+.small-code pre code {
+font-size: 1em;
+}
+</style>
+
+Invasive North American beavers in Southern Patagonia, Ecology, History and Folklore
+========================================================
+author: Derek Corcoran derek.corcoran.barrios@gmail.com
+date: `r Sys.Date()`
+autosize: true
+transition: rotate
+
+```{r setup, include=FALSE}
+opts_chunk$set(cache=TRUE)
+```
+
+![invasion](https://cienciaustral.files.wordpress.com/2015/10/2012-11-18-12-34-38.jpg?w=1400)
+
+
+
+Tierra del Fuego
+========================================================
+incremental: true
+
+
+***
+![isotherms](http://www.scielo.cl/fbpe/img/andgeol/v41n2/art05-figura02.jpg)
+
+
+Tierra del Fuego
+========================================================
+incremental: true
+
+
+***
+```{r, echo = FALSE}
+library(raster)
+meanTF <- readRDS("meanTF.rds")
+plot(meanTF)
+```
+
+Tierra del Fuego
+========================================================
+incremental: true
+
+
+![Steppe](http://chile.travel/wp-content/uploads/bfi_thumb/Tierra-del-fuego-FICH-DST308-mpo6cs5v1zcbuzfwtuhudep0l6wdohzqr40nhc2nxs.jpg)
+
+
+Tierra del Fuego
+========================================================
+
+![Forest](http://static.betazeta.com/www.veoverde.com/wp-content/uploads/2014/02/tumblr_my0pgiEaLc1rf9hn3o1_1280-960x623.jpg)
+
+
+History of beavers in Tierra del Fuego
+========================================================
+
+
+***
+
+![Beavers](https://jonsadventure.files.wordpress.com/2013/02/beavermap.png)
+
+
+========================================================
+incremental: true
+
+
+```{r, echo = FALSE,fig.width=8,fig.height=4.5,dpi=300,out.width="1920px",height="1080px", results = "hide"}
+library(raster)
+myurl <- "http://www.tierradelfuegochile.com/wp-content/gallery/fotos/cerro-diamante-2.jpg"
+z <- tempfile()
+download.file(myurl,z,mode="wb")
+plotRGB(stack(z))
+file.remove(z)
+```
+
+
+========================================================
+incremental: true
+
+![Pinguinos](http://www.tierradelfuegochile.com/wp-content/gallery/fotos/pinguinos-rey-en-rio-pantano.jpg)
+
+
+
+
+Fitness patterns
+========================================================
+incremental: true
+
+```{r, echo=FALSE}
+library(ggplot2)
+library(ggmap)
+beavers <- readRDS("beavers.rds")
+
+TDF <- get_map(location = c(-71, -55.1,-65.2, -52), maptype = "hybrid")
+ggmap(TDF) +geom_point(data= beavers, aes(x =lon, y = lat, color = Habitat)) + theme(legend.position="bottom")
+
+```
+
+Fitness patterns
+========================================================
+incremental: true
+
+- Time consuming
+- Hard to replicate
+- Almost impossible in rare species
+- Need to be able to detect the species
+- Species might be there but not detected
+- false absences might bias estimates
+
+
+***
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+beavers <- readRDS("beavers.rds")
+
+ggplot(beavers, aes(x = Age, y = Weight)) + geom_point(aes(color = Habitat)) + stat_smooth(method = "lm", formula = y ~ log(x), aes(color = Habitat, fill = Habitat)) + theme(legend.position="bottom")
+
+```
+
+Imperfect detection
+========================================================
+- Detection is usually not perfect
+- Depends on:
+  + Species
+  + Season
+  + Observer
+  + Method
+  + Weather
+  
+***
+
+```{r, echo=FALSE}
+#library(raster)
+#graph1<-stack("~/Documents/OccupancyClass/OccupancyClass/Plumas bats.jpg")
+#plotRGB(graph1)
+```
