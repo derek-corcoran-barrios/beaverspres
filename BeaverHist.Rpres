@@ -10,12 +10,12 @@ author: Derek Corcoran derek.corcoran.barrios@gmail.com
 date: `r Sys.Date()`
 autosize: true
 transition: rotate
+css: beavers.css
 
 ```{r setup, include=FALSE}
 opts_chunk$set(cache=TRUE)
 ```
 
-![invasion](https://cienciaustral.files.wordpress.com/2015/10/2012-11-18-12-34-38.jpg?w=1400)
 
 
 
@@ -23,22 +23,38 @@ Tierra del Fuego
 ========================================================
 incremental: true
 
+- Very uniform and cool weather
+- Average high warm month 59 F
+- Average low coldest month 30 F
 
 ***
-![isotherms](http://www.scielo.cl/fbpe/img/andgeol/v41n2/art05-figura02.jpg)
-
-
-Tierra del Fuego
-========================================================
-incremental: true
-
-
-***
-```{r, echo = FALSE}
+```{r, echo = FALSE,dpi=300}
 library(raster)
 meanTF <- readRDS("meanTF.rds")
-plot(meanTF)
+plot(meanTF, main = "Average anual temperature F")
 ```
+
+Wind the prevailing force
+========================================================
+
+![isotherms](https://swelllinesmagdotcom.files.wordpress.com/2014/07/prevailingwindslarge.png)
+
+Wind the prevailing force
+========================================================
+
+![bended tree](http://cdn.c.photoshelter.com/img-get2/I0000zj85lbOB25w/fit=1000x750/JEAL0532-Lenga-Bandera-in-Tierra-del-Fuego-Patagonia.jpg)
+
+
+
+Tierra del Fuego
+========================================================
+incremental: true
+
+
+***
+
+![isotherms](http://www.scielo.cl/fbpe/img/andgeol/v41n2/art05-figura02.jpg)
+
 
 Tierra del Fuego
 ========================================================
@@ -77,14 +93,24 @@ incremental: true
 
 
 
-North American beaver (_Castor canadensis_)
+North American beaver (Castor canadensis)
 ========================================================
 
+- Invasive species in Asia, Europe and South America
+- Ecosystem engineer
+- Reproduces once a year
+- Monogamus, territorial and parental care of 3 years
 
-
+***
+![Beaver](http://4.bp.blogspot.com/-D61aEHKcMm8/VHR_bqHFIqI/AAAAAAAAQeA/7I_Ius3Q8KM/s1600/castor%2Bfiber%2B01.jpg)
 
 History of beavers in Tierra del Fuego
 ========================================================
+
+- 20 beavers were released in argentina Fagnano Lake (1946)
+- Since then they have colonized the continent and archipielago
+- More than 150,000 beavers in Patagonia 
+- Human population in the region is 164,661
 
 
 ***
@@ -94,7 +120,7 @@ History of beavers in Tierra del Fuego
 
 Effects of beavers in the environment
 ========================================================
-```{r, echo=FALSE}
+```{r, echo=FALSE,dpi=300}
 library(ggplot2)
 library(ggmap)
 H <- get_map(location = c(lon = -68.765637, lat = -54.063554), zoom = 17, maptype = "satellite")
@@ -104,7 +130,7 @@ ggmap(H)
 
 Effects of beavers in the environment
 ========================================================
-```{r, echo=FALSE}
+```{r, echo=FALSE,dpi=300}
 library(ggplot2)
 library(ggmap)
 H <- get_map(location = c(lon = -68.767212, lat = -54.372749), zoom = 17, maptype = "satellite")
@@ -114,7 +140,7 @@ ggmap(H)
 
 Effects of beavers in the environment
 ========================================================
-```{r, echo=FALSE}
+```{r, echo=FALSE,dpi=300}
 library(ggplot2)
 library(ggmap)
 H <- get_map(location = c(lon = -68.732871, lat = -54.146855), zoom = 17, maptype = "satellite")
@@ -136,7 +162,7 @@ Fitness patterns
 ========================================================
 incremental: true
 
-```{r, echo=FALSE}
+```{r, echo=FALSE,dpi=300}
 library(ggplot2)
 library(ggmap)
 beavers <- readRDS("beavers.rds")
@@ -160,7 +186,7 @@ incremental: true
 
 ***
 
-```{r, echo=FALSE}
+```{r, echo=FALSE,dpi=300}
 library(ggplot2)
 
 beavers <- readRDS("beavers.rds")
@@ -168,6 +194,53 @@ beavers <- readRDS("beavers.rds")
 ggplot(beavers, aes(x = Age, y = Weight)) + geom_point(aes(color = Habitat)) + stat_smooth(method = "lm", formula = y ~ log(x), aes(color = Habitat, fill = Habitat), alpha = 0.5) + theme(legend.position="bottom")
 
 ```
+
+Fitness patterns
+========================================================
+incremental: true
+
+- Time consuming
+- Hard to replicate
+- Almost impossible in rare species
+- Need to be able to detect the species
+- Species might be there but not detected
+- false absences might bias estimates
+
+
+***
+
+```{r, echo=FALSE,dpi=300}
+library(ggplot2)
+
+beavers <- readRDS("beavers.rds")
+
+ggplot(beavers, aes(x = Age, y = Tail_Vol)) + geom_point(aes(color = Habitat)) + stat_smooth(method = "lm", formula = y ~ log(x), aes(color = Habitat, fill = Habitat), alpha = 0.5) + theme(legend.position="bottom")
+
+```
+
+Fitness patterns
+========================================================
+incremental: true
+
+- Time consuming
+- Hard to replicate
+- Almost impossible in rare species
+- Need to be able to detect the species
+- Species might be there but not detected
+- false absences might bias estimates
+
+
+***
+
+```{r, echo=FALSE,dpi=300}
+library(ggplot2)
+
+beavers <- readRDS("beavers.rds")
+
+ggplot(beavers, aes(x = Age, y = Uterine_Scars)) + geom_point(aes(color = Habitat)) + stat_smooth(method = "lm", formula = y ~ log(x)) + theme(legend.position="bottom")
+
+```
+
 
 Beaver Folklore
 ========================================================

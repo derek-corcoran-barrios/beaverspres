@@ -1,0 +1,16 @@
+<style>
+/body {
+      background-image: url(http://i0.wp.com/www.multispecies-salon.org/working/wp-content/uploads/2014/12/Diaspora-2.jpg);
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+.section .reveal .state-background {
+    background: url(http://i0.wp.com/www.multispecies-salon.org/working/wp-content/uploads/2014/12/Diaspora-2.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+</style>
