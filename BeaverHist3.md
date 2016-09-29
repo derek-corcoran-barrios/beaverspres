@@ -47,6 +47,9 @@ Tierra del Fuego
 ========================================================
 incremental: true
 
+- High wind produces very sharp gradient
+- From dry steppe (9.5 inches of rain)
+- To Evergreen forest (100 inches of rain)
 
 ***
 
@@ -59,6 +62,14 @@ incremental: true
 
 
 ![Steppe](http://chile.travel/wp-content/uploads/bfi_thumb/Tierra-del-fuego-FICH-DST308-mpo6cs5v1zcbuzfwtuhudep0l6wdohzqr40nhc2nxs.jpg)
+
+========================================================
+
+![Pinguinos](http://www.tierradelfuegochile.com/wp-content/gallery/fotos/pinguinos-rey-en-rio-pantano.jpg)
+
+========================================================
+
+![Guanaco](http://static.panoramio.com/photos/original/21457100.jpg)
 
 
 Tierra del Fuego
@@ -74,10 +85,6 @@ Tierra del Fuego
 
 <img src="BeaverHist3-figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" width="1920px" />
 
-
-========================================================
-
-![Pinguinos](http://www.tierradelfuegochile.com/wp-content/gallery/fotos/pinguinos-rey-en-rio-pantano.jpg)
 
 
 
